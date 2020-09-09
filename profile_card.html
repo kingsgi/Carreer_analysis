@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta name="viewport" content="width=device-width","initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8300c7a55e.js" crossorigin="anonymous"></script>
+    <title>cards</title>
+    <style>
+          *{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  min-height: 100vh;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+body .face1 .box{
+  position: absolute;
+  height: 500px;
+  width: 300px;
+  border-radius:10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  margin:0px 0 15px 0;
+  color: #fff;
+}
+.box i{
+  font-size: 90px;
+  font-weight: border;
+  margin: 20px;
+  text-shadow: 0 0 50px #0f0,
+               0 0 100px #0f0,
+               0 0 150px #0f0,
+               0 0 200px #0f0,
+               0 0 250px #0f0,
+               0 0 300px #0f0,
+               0 0 400px #0f0;
+  animation:apple 5s linear infinite;
+}
+@keyframes apple{
+  0%{
+    filter:hue-rotate(0deg);
+  }
+  
+  100%{
+    filter:hue-rotate(360deg)
+  }
+}
+.box span{
+  position: relative;
+  top: 100px;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+body .face2 .card{
+  display:grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px 80px;
+  grid-template-areas: "image" "text" "statues";
+  font-family: roboto;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  text-align:center;
+}
+body .face2 .card .image{
+  grid-area: image;
+  background:url('687d66f492a3aef8e5d76d104c7123f2.jpg');
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+body .face2 .card .text{
+  grid-area:text;
+  margin: 25px;
+}
+body .face2 .card .text .date{
+  color:rgb(255,7,110);
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+body .face2 .card .text h2{
+  margin-bottom: 35px;
+}
+body .face2 .card .text .class_text{
+  color:grey;
+  font-size: 15px;
+  font-weight: 300;
+}
+body .face2 .card .statues{
+  grid-area:statues;
+}
+.statues .prof img{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+}
+body .face2 .card .statues{
+  grid-area: statues;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(255,7,110);
+}
+body .face2 .card .statues .prof{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  color:#fff;
+  text-decoration: none;
+}
+body .face2 .card .statues .prof span{
+  font-size:8px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 10px;
+}
+body .face2 .card .statues .prof i{
+  font-size: 22px;
+  font-weight: 500;
+}
+body .face2 .card .statues .border{
+  border-left:1px solid rgb(172,26,87);
+  border-right:1px solid rgb(172,26,87);
+}
+body .container{
+  position: relative;
+  height: 500px;
+  width: 300px;
+  border-radius:10px;
+}
+body .face1:hover .box{
+  transform: translateY(-100%) rotateX(90deg);
+  background-color: transparent;
+  transition:2s;
+}
+body .container .face2,body .container .face1{
+  background-color: #fff;
+  transform-origin:top;
+  transform: translateY(100%) rotateX(90deg);
+}
+body .container .face2:hover .card{
+  transform: translateY(0%) rotateX(0deg);
+}
+  
+    </style>
+  </head>
+  <body>
+   <div class="contianer">
+    <div class="face1">
+      <div class="box">
+      <i class="fas fa-code"></i>
+      <span class="text">tab the icon to continue....</span>
+      </div>
+    <div class="face2">
+       <div class="card">
+          <div class="image">
+        
+      </div>
+          <div class="text">
+            <p class="date">coderX++</p>
+            <h2>first code</h2>
+            <p class="class_text">My first coding experience was on sololearn with <a href="https://code.sololearn.com/WUu01R5w1pG9/?ref=app">space_remover</a> ,and since then i have coding for 9 million light years. So how about you in the comments...</p>
+      </div>
+      <div class="statues">
+        <a class="prof" href="https://www.sololearn.com/Profile/16979026/?ref=app">
+          <img src="fb-story-icon.jpg"/>
+          <span>follow on sololearn</span>
+        </a>
+        <a class="prof border" href="https://github.com/coder64b">
+          <i class="fab fa-github"></i>
+          <span>copy on github</span>
+        </a>
+        <a class="prof" href="https://www.google.com/">
+          <i class="fab fa-google"></i>
+          <span>message on gmail</span>
+        </a>        
+      </div>
+    </div>
+    </div>
+   </div>
+  </body>
+</html>
